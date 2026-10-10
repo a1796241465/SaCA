@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
-title: "GaCA: Adaptive Sequence-Structure Fusion for Level-4 EC Prediction under Low Sequence Identity"
+title: "SaCA: A Pre-trained Sequence-Structure Fusion Framework for Low-Homology Enzyme Function Prediction at Fine EC Granularity"
 type: software
 authors:
   - family-names: Li
