@@ -1,4 +1,4 @@
-# Manual GaCA Pipeline
+# Manual SaCA Pipeline
 
 This document preserves the explicit commands behind `python reproduce.py gaca` and
 `python reproduce.py full`. Run all commands from the repository root. The unified
@@ -104,7 +104,7 @@ python -m preprocessing.export_effective \
 The final protocol check expects 13,671 training proteins, 3,811 Level-4 labels,
 243 evaluated `<30%` proteins, and 477 evaluated `30-50%` proteins.
 
-## 5. Train GaCA
+## 5. Train SaCA
 
 ```bash
 python -m gaca.train \
