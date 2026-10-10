@@ -84,7 +84,7 @@ rebuilt through the audited store implementation and validated against source pa
 size, modification time, and feature dimension.
 
 ESM extraction does not provide partial checkpoints. An interrupted extractor is
-rerun without repeating completed earlier stages. GaCA training also has no safe
+rerun without repeating completed earlier stages. SaCA training also has no safe
 mid-epoch resume checkpoint; an interrupted training action restarts training while
 retaining all previously completed data and embedding stages. Ambiguous cached
 outputs are not silently accepted.
@@ -119,13 +119,13 @@ scripts/              orchestration, setup, and archived verification helpers
 data_download/        CARE and AlphaFold DB download utilities
 preprocessing/        filtering, sequence-structure checks, and effective splits
 embeddings/           ESM-2/ESM-IF1 extraction and feature-store construction
-gaca/                 GaCA model, training, full-data refit, and inference
+gaca/                 SaCA model, training, full-data refit, and inference
 ablations/            single-modality and fusion ablations
 baselines/            classical, LightGBM, BLASTp, Foldseek, and CLEAN code
 evaluation/           metric aggregation and paired statistics
 figures/              manuscript figure generation
 metadata/             fixed split, protocol, and reference label mapping
-checkpoints/          archived 73.25%/84.91% GaCA checkpoint
+checkpoints/          archived 73.25%/84.91% SaCA checkpoint
 reference_results/    archived metrics, predictions, and figures
 tests/                release guards and orchestration tests
 legacy/               original research code retained for provenance
