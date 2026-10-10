@@ -1,4 +1,4 @@
-"""Generate manuscript Figures 2-6 from the final unified GaCA rerun."""
+"""Generate manuscript Figures 2-6 from the final unified SaCA rerun."""
 
 import argparse
 import json
@@ -31,7 +31,7 @@ MAIN_METHODS = [
 ]
 METHOD_LABELS = {
     "ESM-2 sequence only": "ESM-2 + MLP",
-    "GaCA": "GaCA (Ours)",
+    "GaCA": "SaCA (Ours)",
 }
 METHOD_COLORS = {
     "GaCA": "#F58518",
@@ -267,7 +267,7 @@ def plot_softmax_scores(predictions, output):
             "point_biserial_correlation": correlation,
             "score_bins": grouped.reset_index(drop=True).to_dict(orient="records"),
         }
-    figure.suptitle("GaCA top-class softmax score and Level-4 correctness")
+    figure.suptitle("SaCA top-class softmax score and Level-4 correctness")
     figure.tight_layout()
     save_figure(figure, output / "Fig_S2_Softmax_Scores.pdf")
     return statistics
