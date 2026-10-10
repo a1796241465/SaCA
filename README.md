@@ -1,6 +1,6 @@
-# GaCA: Adaptive Sequence-Structure Fusion for Level-4 EC Prediction under Low Sequence Identity
+# SaCA: A Pre-trained Sequence-Structure Fusion Framework for Low-Homology Enzyme Function Prediction at Fine EC Granularity
 
-GaCA is a sequence-structure fusion model for Level-4 enzyme commission (EC)
+SaCA is a sequence-structure fusion model for Level-4 enzyme commission (EC)
 prediction under low sequence identity. This repository contains the audited code,
 fixed protocol metadata, checkpoint, and archived outputs for the run that obtained
 73.25% accuracy on the CARE `<30%` subset and 84.91% on the CARE `30-50%` subset.
@@ -21,7 +21,7 @@ The setup script must be run after activating the environment. It installs the
 PyTorch/CUDA-specific `torch-scatter` wheel and checks the ESM-IF1 dependencies.
 BLAST+ and Foldseek are additional `PATH` dependencies for the `full` mode.
 
-### Main GaCA reproduction
+### Main SaCA reproduction
 
 ```bash
 python reproduce.py gaca
@@ -29,7 +29,7 @@ python reproduce.py gaca
 
 This command runs the CARE and AlphaFold preparation, preprocessing, ESM-2 and
 ESM-IF1 extraction, guarded feature-store construction, strict effective-set export,
-fixed-split GaCA training, full-data refit, and test evaluation. If a long run is
+fixed-split SaCA training, full-data refit, and test evaluation. If a long run is
 interrupted, resume it with:
 
 ```bash
@@ -149,7 +149,7 @@ Every underlying Step 1-10 command remains documented in
 debugging individual modules or inspecting exact input/output contracts.
 
 The supplied environment targets the server runs (Python 3.9, PyTorch 2.2.2) but is
-not an exact lock of the original GaCA environment. Local records report Python
+not an exact lock of the original SaCA environment. Local records report Python
 3.12.4, PyTorch 2.4.0, and an RTX 4060 Laptop GPU. The archived
 `gaca_environment_and_config.json` was overwritten by a cross-attention run and is
-not a GaCA-specific launch record; this provenance limitation remains documented.
+not a SaCA-specific launch record; this provenance limitation remains documented.
